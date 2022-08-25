@@ -1,13 +1,16 @@
 import React from 'react';
 import { NavLink, Link } from "react-router-dom";
-import "../../App.css"
+import "../../App.css";
+import portal from "../../img/portal.png";
 
 const NavBar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg  mb-4 ">
   <div className="container">
-  <Link to="/" className="fs-3 ubuntu navbar-brand text-light">Rick & Morty <span className="green">Wiki</span> </Link>
+  <Link to="/" className="fs-3 ubuntu navbar-brand text-light"> 
+  <img className='img' src={portal} alt="" />
+  Rick & Morty <span className="green">Wiki</span> </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
       <style jsx>
@@ -15,6 +18,11 @@ const NavBar = () => {
           `
           button[aria-expanded="false"] > .close{
             display:none;
+          }
+          .img{
+            width:50px;
+            heigt:50px;
+            margin-right:10px;
           }
 
           .green{
